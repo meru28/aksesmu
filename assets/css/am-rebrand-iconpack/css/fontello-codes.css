@@ -1,0 +1,11 @@
+
+.amr-aksesmu:before { content: '\e800'; } /* '' */
+.amr-instagram:before { content: '\e801'; } /* '' */
+.amr-youtube:before { content: '\e802'; } /* '' */
+.amr-phone:before { content: '\e803'; } /* '' */
+.amr-envelope:before { content: '\e804'; } /* '' */
+.amr-lang-switch:before { content: '\e805'; } /* '' */
+.amr-chevron-right:before { content: '\e806'; } /* '' */
+.amr-envelope-fill:before { content: '\e807'; } /* '' */
+.amr-whatsapp:before { content: '\e808'; } /* '' */
+.amr-whatsapp-fill:before { content: '\e809'; } /* '' */

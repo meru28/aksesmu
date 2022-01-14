@@ -1,0 +1,26 @@
+@import './palette.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  }
+  /* ... */
+}
+
+@layer utilities {
+  .rectangle {
+    aspect-ratio: 2 / 1;
+  }
+}
+
+@layer utilities {
+  .text-res {
+    font-size: 3vw;
+  }
+}

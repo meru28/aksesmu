@@ -1,0 +1,37 @@
+{
+  "kemudahan": "HOME.kemudahan",
+  "akses": "HOME.akses",
+  "btn_download": "HOME.btn_download",
+  "content_fitur": {
+    "judul": "HOME.content_fitur.judul",
+    "fitur": [
+      {
+        "img_src": "./icon/promo belanja.png",
+        "title": "HOME.content_fitur.belanja"
+      },
+      {
+        "img_src": "./icon/pln,tagihan.png",
+        "title": "HOME.content_fitur.pulsa"
+      },
+      {
+        "img_src": "./icon/tokomodal.png",
+        "title": "HOME.content_fitur.modal"
+      },
+      {
+        "img_src": "./icon/bukuwarung.png",
+        "title": "HOME.content_fitur.catatan"
+      },
+      {
+        "img_src": "./icon/edukasi.png",
+        "title": "HOME.content_fitur.edukasi"
+      },
+      {
+        "img_src": "./icon/partner.png",
+        "title": "HOME.content_fitur.rekanan"
+      }
+    ]
+  },
+  "deskripsi": "HOME.deskripsi",
+  "bergabung": "HOME.bergabung",
+  "bergabung_desc": "HOME.bergabung_desc"
+}
