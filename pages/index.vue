@@ -6,17 +6,15 @@
         <h1 class="text-2xl md:text-4xl text-white font-bold">
           {{ $t(home.kemudahan) }}
         </h1>
-        <div class="flex">
-          <div class="items-center">
-            <img class="float-right -mb-28 order-last" src="~/assets/images/image web/home-hp.png" style="width: 35vw" alt="hp">
-            <div>
-              <p class="mt-2 text-white text-res font-light">
-                {{ $t(home.akses) }}
-              </p>
-              <button class="bg-btn_success mt-3 text-white rounded-2xl px-5 py-2">
-                {{ $t(home.btn_download) }}
-              </button>
-            </div>
+        <div class="grid grid-cols-3">
+          <img class="order-last self-end -mb-16" src="~/assets/images/image web/home-hp.png" style="width: 28vw" alt="hp">
+          <div class="grid grid-cols-1 col-span-2 place-content-center">
+            <p class="mt-2 text-white text-res font-light">
+              {{ $t(home.akses) }}
+            </p>
+            <button class="bg-btn_success text-res mt-3 text-white rounded-xl py-2 px-4 mx-8 ml-1">
+              {{ $t(home.btn_download) }}
+            </button>
           </div>
         </div>
       </div>
@@ -26,11 +24,11 @@
         {{ $t(home.content_fitur.judul) }}
       </h3>
       <div class="mt-4 grid grid-cols-3 gap-3">
-        <div v-for="(content, i) in home.content_fitur.fitur" :key="i" class="bg-white rounded-xl h-18 rectangle shadow-lg shadow-gray-400 lg:w-80 sm:w-48 py-2">
-          <div class="pl-3">
+        <div v-for="(content, i) in home.content_fitur.fitur" :key="i" class="bg-white rounded-xl grid content-center h-18 rectangle shadow-lg shadow-gray-400 py-2 overflow-scroll">
+          <div class="px-3">
             <img class="w-1/4" :src="content.img_src" alt="belanja">
           </div>
-          <h4 class="text-gray-900 text-res font-extrabold pl-3">
+          <h4 class="text-gray-900 text-res font-extrabold px-3">
             {{ $t(content.title) }}
           </h4>
         </div>
@@ -39,9 +37,9 @@
         <div class="relative -mr-14 z-10 inset-0">
           <img class="absolute -bottom-8" style="width:50vw" src="~/assets/images/Group 27.png" alt="">
         </div>
-        <div class="relative col-span-3 justify-self-end aspect-square h-auto mt-7 bg-primary rounded-tl-[57px] rounded-tr-[20px] rounded-b-[20px] -ml-9 overflow-hidden">
+        <div class="relative col-span-3 aspect-square h-auto mt-7 rounded-tl-[57px] rounded-tr-[20px] rounded-b-[20px] -ml-9 overflow-hidden">
           <img class="object-cover h-full" src="~/assets/images/toko.png" alt="">
-          <p class="absolute -top-2 text-white p-7 text-res text-justify" style="line-height:5vw;">
+          <p class="absolute h-full w-full -mt-28 top-2/4 text-white p-7 text-res text-justify" style="line-height:5vw;">
             {{ $t(home.deskripsi) }}
           </p>
         </div>

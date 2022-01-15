@@ -1,4 +1,10 @@
 export default {
+  HEADER: {
+    beranda: 'Beranda',
+    perusahaan: 'Perusahaan',
+    bantuan: 'Bantuan',
+    karir: 'Karir'
+  },
   HOME: {
     kemudahan: 'Kemudahan Aksesmu untuk usaha warung Anda',
     akses: 'Akses mudah bagi pengusaha warung atau UMKM dalam pemenuhan kebutuhan barang dagang dan mengembangkan usahanya melalui berbagai fitur yang mudah digunakan seperti belanja melalui aplikasi hingga layanan pesan antar.',

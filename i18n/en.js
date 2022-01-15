@@ -1,4 +1,10 @@
 export default {
+  HEADER: {
+    beranda: 'Homepage',
+    perusahaan: 'Company',
+    bantuan: 'Help',
+    karir: 'Career'
+  },
   HOME: {
     kemudahan: 'Your Ease of Access for your stall business',
     akses: 'Easy access for shopkeepers or SMEs in meeting the needs of merchandise and developing their business through various easy-to-use features such as shopping through applications to delivery services.',
