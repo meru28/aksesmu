@@ -8,7 +8,7 @@
       <div class="mt-4 grid grid-cols-3 gap-3">
         <div v-for="(content, i) in home.content_fitur.fitur" :key="i" class="bg-white rounded-xl grid content-center h-18 rectangle shadow-lg shadow-gray-400 py-2 overflow-scroll">
           <div class="px-3">
-            <img class="w-1/4" :src="content.img_src" alt="belanja">
+            <nuxt-img class="w-1/4" :src="content.img_src" alt="belanja" />
           </div>
           <h4 class="text-gray-900 text-res font-extrabold px-3">
             {{ $t(content.title) }}
@@ -17,10 +17,10 @@
       </div>
       <div class="relative grid grid-cols-4 pb-4">
         <div class="relative -mr-14 z-10 inset-0">
-          <img class="absolute -bottom-8" style="width:50vw" src="~/assets/images/Group 27.png" alt="">
+          <nuxt-img class="absolute -bottom-8" style="width:50vw" src="home/Group 27.png" alt="" />
         </div>
         <div class="relative col-span-3 aspect-square h-auto mt-7 rounded-tl-[57px] rounded-tr-[20px] rounded-b-[20px] -ml-9 overflow-hidden">
-          <img class="object-cover h-full" src="~/assets/images/toko.png" alt="">
+          <nuxt-img class="object-cover h-full" src="home/toko.png" alt="" />
           <p class="absolute h-full w-full -mt-32 top-2/4 text-white p-7 text-res text-justify" style="line-height:5vw;">
             {{ $t(home.deskripsi) }}
           </p>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="bg-white mb-8">
-      <img class="w-full" src="~/assets/images/home-2.png" alt="home-2">
+      <nuxt-img class="w-full" src="home/home-2.png" alt="home-2" />
       <div class="px-4 mt-5 sm:pr-0">
         <h2 class="text-primary text-2xl font-extrabold text-left tracking-tight md:tracking-tighter sm:tracking-tighter">
           {{ $t(home.bergabung) }}

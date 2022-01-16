@@ -1,13 +1,13 @@
 <template>
   <div>
-    <img class="bg-mainlogo w-full" :src="data.img_banner" alt="home">
+    <nuxt-img class="bg-mainlogo w-full" :src="data.img_banner" alt="home" />
     <div class="bg-bgchome py-6 px-4 box-border">
       <div>
         <h1 class="text-2xl md:text-4xl text-white font-bold">
           {{ $t(data.title) }}
         </h1>
         <div class="grid grid-cols-3">
-          <img class="order-last -mb-16" :src="data.img_3D" style="width: 28vw" alt="hp">
+          <nuxt-img class="order-last -mb-16" :src="data.img_3D" style="width: 28vw" alt="hp" />
           <div class="grid grid-cols-1 col-span-2 place-content-center">
             <p class="mt-2 text-white text-res font-light">
               {{ $t(data.article) }}

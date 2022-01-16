@@ -15,7 +15,7 @@
           </div>
           <div class="relative">
             <div class="absolute inset-0 top-16 flex items-center justify-center transform slide" :class="[activeSlideCampaign != index ? 'hidden' : 'block']">
-              <img class="w-4/5" :src="item.img_src" alt="">
+              <nuxt-img class="w-4/5" :src="item.img_src" alt="" />
             </div>
           </div>
           <div class="relative">

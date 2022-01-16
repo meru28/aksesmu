@@ -3,12 +3,12 @@
     <s class="font-bold">1. Download & install aplikasi Aksesmu</s>
     <div class="relative inner overflow-hidden hp shadow-md shadow-gray-600">
       <template v-for="(slide, indxx) in data.carousel_hp">
-        <img
+        <nuxt-img
           :key="indxx"
           :ref="`carousel` + indxx"
           class="absolute object-cover inset-0 h-full transition-all ease-in-out duration-1000 transform translate-x-0 slide"
           :class="[activeSlideIndex != indxx ? 'hidden' : 'block']"
-          :src="slide.img_src">
+          :src="slide.img_src" />
       </template>
     </div>
     <div class="flex justify-center items-center">

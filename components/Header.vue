@@ -76,10 +76,10 @@
           <div class="ml-6 divide-y divide-gray mr-3">
             <div v-for="(navTitle2, idx) in home.content_fitur.fitur" :key="idx" class="flex justify-between items-center">
               <div class="flex-shrink-0">
-                <img
+                <nuxt-img
                   class="w-6"
                   :src="navTitle2.img_src"
-                  alt>
+                  alt="uhuy" />
               </div>
               <a href="#" class="text-sm font-bold flex-grow py-2 ml-[10px] text-black hover:rounded-lg hover:py-2 hover:pl-[7px] hover:text-white hover:bg-gray-700 focus:rounded-lg focus:pl-2 focus:outline-none focus:text-white focus:bg-gray-700">
                 {{ $t(navTitle2.title) }}

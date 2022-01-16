@@ -29,7 +29,7 @@
       </div>
       <div class="text-sm font-bold leading-[27px]">
         <h3>Unduh Aplikasi</h3>
-        <img class="w-3/4" src="~/assets/images/download button.png" alt="donlog">
+        <nuxt-img class="w-3/4" src="~/assets/images/download button.png" alt="donlod" />
       </div>
       <div class="col-span-2 border-t border-t-white pt-4">
         <p class="text-xs text-center">Copyright 2022 PT Sumber Trijaya Lestari</p>
