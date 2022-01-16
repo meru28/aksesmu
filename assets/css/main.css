@@ -20,6 +20,12 @@
 }
 
 @layer utilities {
+  .square {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@layer utilities {
   .text-res {
     font-size: 2.5vw;
   }

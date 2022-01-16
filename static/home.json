@@ -1,7 +1,9 @@
 {
-  "kemudahan": "HOME.kemudahan",
-  "akses": "HOME.akses",
-  "btn_download": "HOME.btn_download",
+  "img_banner": "./home/home-1.png",
+  "title": "HOME.kemudahan",
+  "article": "HOME.akses",
+  "btn_text": "HOME.btn_download",
+  "img_3D": "./home/home-hp.png",
   "content_fitur": {
     "judul": "HOME.content_fitur.judul",
     "fitur": [
