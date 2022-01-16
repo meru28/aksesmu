@@ -15,7 +15,9 @@ module.exports = {
   plugins: [
     'vue'
   ],
-  // add your custom rules here
+  // 'vue/multi-word-component-names': ['warning', {
+  //   ignores: ['Footer', 'index']
+  // }],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-new': 0,

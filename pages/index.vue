@@ -56,98 +56,161 @@
         </p>
       </div>
     </div>
-    <div class="bg-creamy text-center py-6">
-      <h3 class="text-lg text-black font-bold">
-        {{ $t(home.content_fitur.judul) }}
-      </h3>
-      <div class="flex justify-center img-content mt-6 mb-4">
-        <img class="w-72" src="~/assets/images/ilustrasi/home-keuntungan 1.png" alt="">
-      </div>
-      <p class="text-sm">
-        Harga bersaing & Banyak promonya
-      </p>
-      <div class="flex justify-center">
-        <div class="device-wrapper deviceLeft">
-          <div class="device" data-device="iPhoneX" data-orientation="portrait" data-color="black">
-            <div class="screen">
-              <!-- PUT CONTENTS HERE -->
+    <div class="container bg-creamy h-[280px] pb-[304px]">
+      <div class="max-w-4xl mx-auto grid grid-rows-1 relative text-center">
+        <div class="pt-[15px] pb-6">
+          <h3 class="w-full text-lg text-black font-bold">
+            {{ $t(home.content_fitur.judul) }}
+          </h3>
+        </div>
+        <div>
+          <div v-for="(item, index) in home.carousel_campaign" :key="index">
+            <div class="relative">
+              <p class="absolute text-sm inset-0 top-[165px] flex items-center justify-center mb-4" :class="[activeSlideCampaign != index ? 'hidden' : 'block']">
+                {{ $t(item.title) }}
+              </p>
             </div>
-            <div class="button" data-toggle="popover" data-placement="bottom" data-content="Device buttons are perfectly rendered and can be hooked to links or JavaScript events">
-              <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+            <div class="relative">
+              <div class="absolute inset-0 top-16 flex items-center justify-center transform slide" :class="[activeSlideCampaign != index ? 'hidden' : 'block']">
+                <img class="w-4/5" :src="item.img_src" alt="">
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute inset-0 top-44 px-4">
+                <button
+                  class="h-2 mt-4 mx-2 mb-0 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-teal-600 hover:shadow-lg"
+                  :class="[activeSlideCampaign != index ? 'bg-gray-600 w-2' : 'bg-mainlogo w-4', index === 0 ? '-translate-x-6' : index === 2 ? 'translate-x-6' : '']"
+                  @click="activeSlideCampaign = index" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex justify-centemx-auto">
-        <div class="flex iphone-x w-2/4">
-          <i>Speaker</i>
-          <b>Camera</b>
-          <img class="w-full h-full object-fill" src="~/assets/images/home-1.png" alt="">
-          <!-- <s>10:24</s> -->
+      <!-- <button class="bg-primary text-white">prev</button>
+      <button class="bg-primary text-white">next</button> -->
+    </div>
+    <div class="grid grid-rows-3 place-items-center w-screen bg-gray-200 py-9 justify-center">
+      <h3 class="text-base text-black font-bold">
+        Cara Pakai Aplikasi Aksesmu
+      </h3>
+      <div class="row-span-2 border-b border-b-gray-300 py-2">
+        <ul class="flex justify-center text-xs text-[#19B562] font-bold">
+          <li class="mx-4">
+            Daftar
+          </li>
+          <li class="mx-4">
+            Aktivasi Pembayaran Tempo
+          </li>
+          <li class="mx-4">
+            Belanja Stok
+          </li>
+        </ul>
+      </div>
+      <!-- 'translate-x-full' : 'translate-x-0' -->
+      <div class="iphone-x">
+        <s class="font-bold">1. Download & install aplikasi Aksesmu</s>
+        <div class="relative inner overflow-hidden hp">
+          <template v-for="(slide, indxx) in home.carousel_hp">
+            <img
+              :key="indxx"
+              :ref="`carousel` + indxx"
+              class="absolute object-cover inset-0 h-full transition-all ease-in-out duration-1000 transform translate-x-0 slide"
+              :class="[activeSlideIndex != indxx ? 'hidden' : 'block']"
+              :src="slide.img_src">
+          </template>
+        </div>
+        <div class="flex justify-center items-center">
+          <div v-for="(btn, uhh) in test" :key="uhh">
+            <button
+              class="span h-2 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-teal-600 hover:shadow-lg" @click="activeSlideIndex = uhh" :class="[activeSlideIndex != uhh ? 'bg-gray-600 w-2': 'bg-mainlogo w-4', uhh === 0 ? '-translate-x-4' : uhh === 2 ? 'translate-x-4' : '']" />
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
 <script>
+import { ref, onMounted } from '@nuxtjs/composition-api'
 import home from 'static/home'
 export default {
   name: 'IndexPage',
   setup () {
+    const root = ref(null)
+    const carousel0 = ref(null)
+    const carousel1 = ref(null)
+    const carousel2 = ref(null)
+    const carouselTrack = ref(null)
+    const activeSlideCampaign = ref(0)
+    const activeSlideIndex = ref(0)
+    const idxCarousel = ref(0)
+    const test = ref([
+      0, 1, 2
+    ])
+    onMounted(() => {
+      const uhuy = carousel0.value[0]
+      // const track = Array.from(uhuy.children)
+      // console.log('cek carousel 2 ::', uhuy)
+      console.log('cek list carousel ::', uhuy.nextElementSibling)
+      // root.value.classList.remove('translate-x-0')
+      // root.value.classList.add('-translate-x-full')
+    })
+
+    const dotNav = (e) => {
+      console.log('cekk e ::', e)
+    }
+    const onInitCarousel = () => {
+      // console.log(' ashahsd')
+    }
+
+    const nextSlide = (item) => {
+      // console.log('cek carousel2 ::', carousel2.value.nextElementSibling)
+      // console.log('cek classList', carousel.value)
+      if (item === 2) {
+        carousel1.value[0].classList.remove('translate-x-0')
+        carousel1.value[0].classList.add('-translate-x-full')
+        carousel1.value[0].previousElementSibling.classList.remove('translate-x-full')
+        carousel1.value[0].previousElementSibling.classList.add('translate-x-0')
+      } else {
+        carousel0.value[0].classList.remove('translate-x-0')
+        carousel0.value[0].classList.add('-translate-x-full')
+        carousel0.value[0].nextElementSibling.classList.remove('translate-x-full')
+        carousel0.value[0].nextElementSibling.classList.add('translate-x-0')
+      }
+    }
+
     return {
-      home
+      home,
+      root,
+      carousel0,
+      carousel1,
+      carousel2,
+      carouselTrack,
+      activeSlideCampaign,
+      nextSlide,
+      idxCarousel,
+      onInitCarousel,
+      dotNav,
+      activeSlideIndex,
+      test
     }
   }
 }
 </script>
-<style lang="scss" scoped>
-.device-wrapper {
-  max-width: 300px;
-  width: 100%; }
-
-.device {
-  position: relative;
-  background-size: cover; }
-  .device::after {
-    position: absolute;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; }
-  .device .screen {
-    position: absolute;
-    background-size: cover;
-    pointer-events: auto; }
-  .device .button {
-    position: absolute;
-    cursor: pointer; }
-
-.device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] {
-  padding-bottom: 198.89807163%;
-  background-image: url(~/assets/images/device/portrait_black.png);
-  z-index: initial;
-}
-  .device[data-device="iPhoneX"][data-orientation="portrait"][data-color="black"] .screen {
-    top: 3.254847645%;
-    left: 7.162534435%;
-    width: 85.67493113%;
-    height: 93.49030471%;
-    border: 0px;
-    z-index: -1;
+<style lang="scss">
+  .device-wrapper {
+    max-width: 40vw;
   }
-
 .iphone-x {
   position: relative;
-  margin: 40px auto;
-  width: 360px;
-  height: 780px;
-  background-color: #7371ee;
-  background-image: linear-gradient(60deg, #7371ee 1%,#a1d9d6 100%);
-  border-radius: 40px;
-  box-shadow: 0px 0px 0px 11px #1f1f1f, 0px 0px 0px 13px #191919, 0px 0px 0px 20px #111;
-
-  &:before,
+  .inner {
+    position: relative;
+    margin: 40px 10px 97px;
+    width: 58vw;
+    height: auto;
+    background-color: #292929;
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px 9px #1f1f1f, 0px 0px 0px 11px #191919, 0px 0px 0px 18px #111;
+     &:before,
   &:after{
     content: '';
     position: absolute;
@@ -156,6 +219,14 @@ export default {
   }
 
   // home button indicator
+  &:after {
+    bottom: 7px;
+    width: 140px;
+    height: 4px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+  }
   &:after {
     bottom: 7px;
     width: 140px;
@@ -193,10 +264,9 @@ export default {
     border-radius: 8px;
     box-shadow: inset 0px -3px 3px 0px rgba(256, 256, 256, 0.2);
   }
-
   // camera
   b {
-    left: 10%;
+    left: -11%;
     top: 0px;
     transform: translate(180px, 4px);
     width: 12px;
@@ -223,24 +293,17 @@ export default {
 
   // time
   s {
-    top: 50px;
-    color: #fff;
+    bottom: 27px;
+    color: black;
     text-align: center;
     text-decoration: none;
     width: 100%;
-    font-size: 70px;
-    font-weight: 100;
-    padding-top: 60px;
   }
 
   // action buttons
   span {
-    bottom: 50px;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50%;
-    left: 30px;
+    left: 107px;
 
     & + span {
       left: auto;

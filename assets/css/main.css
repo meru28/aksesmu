@@ -24,3 +24,9 @@
     font-size: 2.5vw;
   }
 }
+
+@layer utilities {
+  .hp {
+    aspect-ratio: 1 / 2;
+  }
+}

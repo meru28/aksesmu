@@ -1,7 +1,7 @@
 <template>
   <nav class="bg-white shadow-lg shadow-gray-500 sticky top-0 z-40">
-    <div class="container md:max-w-6xl mx-auto px-4 py-4">
-      <div :class="[isOpenMenu || isOpenLang ? 'backdrop-blur-sm bg-black/20 fixed inset-0 top-[81px] w-full h-full' : '']" />
+    <div class="container md:max-w-6xl mx-auto p-1 px-4">
+      <div :class="[isOpenMenu || isOpenLang ? 'backdrop-blur-sm bg-black/20 fixed inset-0 top-14 w-full h-full' : '']" />
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <!-- Mobile menu button-->
@@ -52,7 +52,7 @@
           </section>
         </div>
       </div>
-      <div class="absolute w-80 bg-white md:hidden left-0 top-20 pb-5 shadow-lg shadow-gray-500" :class="[isOpenMenu ? '' : 'hidden']">
+      <div class="absolute w-80 bg-white md:hidden left-0 top-14 pb-5 shadow-lg shadow-gray-500" :class="[isOpenMenu ? '' : 'hidden']">
         <div class="ml-6 pt-2 mr-3 divide-y divide-gray border-b border-gray">
           <div v-for="(navTitle, i) in headerMenu" :key="i" class="flex justify-between items-center">
             <a

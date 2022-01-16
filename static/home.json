@@ -33,5 +33,33 @@
   },
   "deskripsi": "HOME.deskripsi",
   "bergabung": "HOME.bergabung",
-  "bergabung_desc": "HOME.bergabung_desc"
+  "bergabung_desc": "HOME.bergabung_desc",
+  "carousel_campaign": [
+    {
+      "img_src": "./ilustrasi/home-keuntungan 1.png",
+      "title": "HOME.carousel_campaign.hargaPromo"
+    },
+    {
+      "img_src": "./ilustrasi/home-keuntungan 2.png",
+      "title": "HOME.carousel_campaign.bayarBelanja"
+    },
+    {
+      "img_src": "./ilustrasi/home-keuntungan 3.png",
+      "title": "HOME.carousel_campaign.pengiriman"
+    }
+  ],
+  "carousel_hp": [
+    {
+      "img_src": "./tes/1.png",
+      "title": "HOME.carousel_campaign.hargaPromo"
+    },
+    {
+      "img_src": "./tes/2.png",
+      "title": "HOME.carousel_campaign.bayarBelanja"
+    },
+    {
+      "img_src": "./tes/3.png",
+      "title": "HOME.carousel_campaign.pengiriman"
+    }
+  ]
 }
